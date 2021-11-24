@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ABDCC6BC-1205-4E42-B51D-4EF4069CF2C2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GestionnaireStagiaire</RootNamespace>
+    <AssemblyName>GestionnaireStagiaire</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>stagiaires-ma-logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\Desktop\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NumericUpDownLib, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dirkster.NumericUpDownLib.2.4.0\lib\net40\NumericUpDownLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Compte.Designer.cs">
+      <DependentUpon>Compte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Confirmationbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirmationbox.Designer.cs">
+      <DependentUpon>Confirmationbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Databasesetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Databasesetting.Designer.cs">
+      <DependentUpon>Databasesetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="excel.cs" />
+    <Compile Include="frmAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlert.Designer.cs">
+      <DependentUpon>frmAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListStagiaire.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListStagiaire.Designer.cs">
+      <DependentUpon>ListStagiaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListStagiaireAcc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListStagiaireAcc.Designer.cs">
+      <DependentUpon>ListStagiaireAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOGIN.Designer.cs">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOGIN2.Designer.cs">
+      <DependentUpon>LOGIN2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LP_AS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LP_AS.Designer.cs">
+      <DependentUpon>LP_AS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manageAccSTG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="manageAccSTG.Designer.cs">
+      <DependentUpon>manageAccSTG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageStagiaire.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManageStagiaire.Designer.cs">
+      <DependentUpon>ManageStagiaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sqlcon.cs" />
+    <Compile Include="stagiareAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="stagiareAdd.Designer.cs">
+      <DependentUpon>stagiareAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="summary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="summary.Designer.cs">
+      <DependentUpon>summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userManagment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userManagment.Designer.cs">
+      <DependentUpon>userManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="word.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compte.resx">
+      <DependentUpon>Compte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confirmationbox.resx">
+      <DependentUpon>Confirmationbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Databasesetting.resx">
+      <DependentUpon>Databasesetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlert.resx">
+      <DependentUpon>frmAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListStagiaire.resx">
+      <DependentUpon>ListStagiaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListStagiaireAcc.resx">
+      <DependentUpon>ListStagiaireAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOGIN.resx">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOGIN2.resx">
+      <DependentUpon>LOGIN2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LP_AS.resx">
+      <DependentUpon>LP_AS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manageAccSTG.resx">
+      <DependentUpon>manageAccSTG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageStagiaire.resx">
+      <DependentUpon>ManageStagiaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stagiareAdd.resx">
+      <DependentUpon>stagiareAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="summary.resx">
+      <DependentUpon>summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userManagment.resx">
+      <DependentUpon>userManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Models\Attestationdestage.docx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_reset_100px1.png" />
+    <None Include="Resources\icons8_reset_100px.png" />
+    <None Include="Resources\icons8_save_50px.png" />
+    <None Include="Resources\icons8_edit_52px.png" />
+    <None Include="Resources\icons8_broom_60px.png" />
+    <None Include="Resources\icons8_invisible_26px.png" />
+    <None Include="Resources\icons8_eye_26px_1.png" />
+    <None Include="Resources\icons8_eye_26px.png" />
+    <None Include="Resources\icons8_lock_26px.png" />
+    <None Include="Resources\icons8_user_26px.png" />
+    <None Include="Resources\icons8_user_16px.png" />
+    <None Include="Resources\icons8_user_100px.png" />
+    <None Include="Resources\icons8_eye_100px_1.png" />
+    <None Include="Resources\icons8_database_100px.png" />
+    <None Include="Resources\icons8_database_16px.png" />
+    <None Include="Resources\icons8_database_25px.png" />
+    <None Include="Resources\icons8_database_administrator_25px.png" />
+    <None Include="Resources\icons8_database_administrator_100px.png" />
+    <None Include="Resources\stagiaires-ma-logo - Copy.jpg" />
+    <None Include="Resources\stagiaires-ma-logo.jpg" />
+    <None Include="Resources\icons8_play_button_36px.png" />
+    <None Include="Resources\icons8_play_button_96px.png" />
+    <None Include="Resources\icons8_youtube_96px.png" />
+    <None Include="Resources\icons8_account_30px_1.png" />
+    <None Include="Resources\icons8_account_30px.png" />
+    <None Include="Resources\icons8_account_100px_1.png" />
+    <None Include="Resources\icons8_account_100px.png" />
+    <None Include="Resources\icons8_user_100px_2.png" />
+    <None Include="Resources\icons8_user_100px_1.png" />
+    <None Include="Resources\icons8_export_50px_2.png" />
+    <None Include="Resources\icons8_export_50px_1.png" />
+    <None Include="Resources\Capture.PNG" />
+    <None Include="Resources\icons8_google_25px_1.png" />
+    <None Include="Resources\icons8_facebook_60px_1.png" />
+    <None Include="Resources\icons8_google_96px.png" />
+    <None Include="Resources\icons8_twitter_52px.png" />
+    <None Include="Resources\icons8_lock_100px.png" />
+    <None Include="Resources\icons8_notification_96px.png" />
+    <None Include="Resources\preview-2 - Copy.png" />
+    <None Include="Resources\preview-25.png" />
+    <None Include="Resources\preview-2.png" />
+    <None Include="Resources\ML.png" />
+    <None Include="Resources\d.png" />
+    <None Include="Resources\Logo_nouveau_cosumar.png" />
+    <None Include="Resources\guide-stagiaire - Copy.png" />
+    <None Include="Resources\guide-stagiaire.png" />
+    <None Include="Resources\icons8_1_50px.png" />
+    <None Include="Resources\icons8_change_user_90px.png" />
+    <None Include="Resources\icons8_change_user_30px_2.png" />
+    <None Include="Resources\icons8_change_user_30px_1.png" />
+    <None Include="Resources\icons8_user_groups_50px_2.png" />
+    <None Include="Resources\icons8_user_folder_32px.png" />
+    <None Include="Resources\icons8_user_50px.png" />
+    <None Include="Resources\icons8_delete_user_male_24px.png" />
+    <None Include="Resources\icons8_checked_user_male_26px.png" />
+    <None Include="Resources\icons8_user_groups_50px.png" />
+    <None Include="Resources\icons8_user_groups_48px.png" />
+    <None Include="Resources\icons8_summary_list_50px_2.png" />
+    <None Include="Resources\icons8_summary_list_50px_1.png" />
+    <None Include="Resources\icons8_summary_list_50px.png" />
+    <None Include="Resources\icons8_lock_16px.png" />
+    <None Include="Resources\icons8_lock_50px.png" />
+    <None Include="Resources\icons8_name_50px.png" />
+    <None Include="Resources\icons8_user_male_26px.png" />
+    <None Include="Resources\Logo-Cosumar-e1549017294178.png" />
+    <None Include="Resources\cd784f260b8176779b47d40c0a07fa4bdcf42054.jpg" />
+    <None Include="Resources\21.png" />
+    <None Include="Resources\icons8_delete_50px.png" />
+    <None Include="Resources\icons8_edit_24px.png" />
+    <None Include="Resources\icons8_checkmark_24px.png" />
+    <None Include="Resources\icons8_menu_26px_1.png" />
+    <None Include="Resources\icons8_menu_26px.png" />
+    <None Include="Resources\icons8_back_50px_1.png" />
+    <None Include="Resources\icons8_back_50px.png" />
+    <None Include="Resources\icons8_settings_26px_1.png" />
+    <None Include="Resources\icons8_high_importance_30px_1.png" />
+    <None Include="Resources\icons8_high_importance_30px.png" />
+    <None Include="Resources\icons8_plus_24px.png" />
+    <None Include="Resources\icons8_microsoft_excel_30px_2.png" />
+    <None Include="Resources\icons8_microsoft_word_30px_1.png" />
+    <None Include="Resources\icons8_microsoft_excel_30px_1.png" />
+    <None Include="Resources\icons8_microsoft_excel_30px.png" />
+    <None Include="Resources\icons8_search_30px_1.png" />
+    <None Include="Resources\icons8_search_30px.png" />
+    <None Include="Resources\icons8_todo_list_30px_2.png" />
+    <None Include="Resources\icons8_todo_list_30px_1.png" />
+    <None Include="Resources\icons8_bulleted_list_30px_1.png" />
+    <None Include="Resources\icons8_bulleted_list_30px.png" />
+    <None Include="Resources\icons8_add_user_group_man_man_30px_1.png" />
+    <None Include="Resources\icons8_add_user_group_man_man_30px.png" />
+    <None Include="Resources\icons8_menu_30px.png" />
+    <None Include="Resources\icons8_combo_chart_30px_2.png" />
+    <None Include="Resources\icons8_combo_chart_16px_1.png" />
+    <None Include="Resources\icons8_combo_chart_16px.png" />
+    <None Include="Resources\icons8_settings_16px.png" />
+    <None Include="Resources\icons8_settings_26px.png" />
+    <None Include="Resources\icons8_combo_chart_30px.png" />
+    <None Include="Resources\Logo-Cosumar.jpg" />
+    <None Include="Resources\Checkmark_28px.png" />
+    <None Include="Resources\Error_28px.png" />
+    <None Include="Resources\Info_28px.png" />
+    <None Include="Resources\Multiply_18px.png" />
+    <None Include="Resources\Warning_28px.png" />
+    <None Include="Resources\254819__thoribass__notification2-freesound.wav" />
+    <None Include="Resources\icons8_note_100px_1.png" />
+    <Content Include="stagiaires-ma-logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
